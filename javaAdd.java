@@ -5,7 +5,7 @@ public class javaAdd{
         float a,b,res;
         char choice, ch;
         Scanner scan = new Scanner(System.in);
-        do{
+        while(true){
             System.out.println("1. Add Two numbers\n");
             System.out.println("2. Multiply Two numbers\n");
             System.out.println("3. Exit\n\n");
@@ -18,13 +18,18 @@ public class javaAdd{
                             res = a + b;
                             System.out.println("Result = " + res);
                             break;
+                case '2' :  System.out.println("Enter two numbers ");
+                            a = scan.nextFloat();
+                            b = scan.nextFloat();
+                            res = a * b;
+                            System.out.println("Result = " + res);
+                            break;
                 case '3' : System.exit(0);
                             break;
                 default : System.out.println("Invalid Choice\n");
             }
             System.out.println("------------------------------\n");
         }
-        while(choice != '2');
     }
 }
 
