@@ -8,7 +8,8 @@ public class javaAdd{
         while(true){
             System.out.println("1. Add Two numbers\n");
             System.out.println("2. Multiply Two numbers\n");
-            System.out.println("3. Exit\n\n");
+            System.out.println("3. Subtract Two numbers\n");
+            System.out.println("4. Exit\n\n");
             System.out.println("Enter your choice:");
             choice = scan.next().charAt(0);
             switch(choice){
@@ -24,7 +25,13 @@ public class javaAdd{
                             res = a * b;
                             System.out.println("Result = " + res);
                             break;
-                case '3' : System.exit(0);
+                case '3' :  System.out.println("Enter two numbers ");
+                            a = scan.nextFloat();
+                            b = scan.nextFloat();
+                            res = a - b;
+                            System.out.println("Result = " + res);
+                            break;
+                case '4' : System.exit(0);
                             break;
                 default : System.out.println("Invalid Choice\n");
             }
